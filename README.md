@@ -1,3 +1,3 @@
 # Snippets
 
-**Various Algoriths and Technique implementations**
+**Various Algorithms and Technique implementations**
