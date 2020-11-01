@@ -1,4 +1,4 @@
-// example : http://p.ip.fi/lh-T
+// example : http://p.ip.fi/Hr6-
 
 struct Combinatorics{
     ll fact[maxn],inv[maxn];
@@ -23,14 +23,14 @@ struct Combinatorics{
         }
     }
  
-    ll choose(ll n,ll r){
+    ll Choose(ll n,ll r){
         if(n < r)return 0;
         ll u = fact[n];
         ll v = (inv[r] * inv[n - r]) % mod;
         return (u * v) % mod;
     }
 
-    ll factorial(ll n){
+    ll Factorial(ll n){
     	return fact[n];
     }
 
