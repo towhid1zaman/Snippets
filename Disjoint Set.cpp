@@ -9,4 +9,4 @@ struct disjoint{
         void Union( int a, int b ){ 
             fa[Find(a)]=Find(b);
         }
-}djs;
+}dsu;
