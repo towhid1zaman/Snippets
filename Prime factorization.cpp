@@ -1,7 +1,7 @@
 //prime factorization
 vector<pair<ll,ll>>factorize(ll a){
     vector<pair<ll,ll> > pf;
-    for (int i = 2; i * i <= a; ++i) {
+    for (ll i = 2; i * i <= a; ++i) {
         if (a % i) continue;
         pf.emplace_back(i, 0);
         while (a % i == 0) {
