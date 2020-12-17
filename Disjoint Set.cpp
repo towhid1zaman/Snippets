@@ -8,13 +8,13 @@ struct disjoint{
             return x==fa[x]?x:fa[x]=Find(fa[x]);
         }
         void Union(int a, int b){ 
-            fa[Find(a)]=Find(b);
             a = Find(a), b = Find(b);
+            if(a==b)return;
             if(sz[a] < sz[b]) swap(a,b);
             fa[b] = a;
             sz[a] += sz[b];
         }
-    	int Size(int n){
-    		return sz[n];
-    	}
+        int Size(int n){
+            return sz[n];
+        }
 }dsu;
