@@ -1,12 +1,14 @@
 //smallest prime factor of a number
-int lp[10000005];
+ll lp[10000005];
 void sieve(){
+    fill(lp, lp+10000005, 0);
     for(ll i=2;i<=10000000;i++){
         if(lp[i]==0)
         for(ll j=i*i;j<=10000000;j+=i){
             if(lp[j]==0)
             lp[j]=i;
         }
+        if(lp[i]==0)lp[i]=i;
     }
 }
 //or
