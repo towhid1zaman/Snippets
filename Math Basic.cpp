@@ -14,9 +14,18 @@ namespace Math_Basic{
     ll lcm(ll a, ll b){
         return a/ gcd(a,b)*b;
     }
-    ll bigpow(ll a, ll e) {
+    ll gcdExtended(ll a,ll b,ll &x,ll &y){
+        if(b==0){
+            x=1ll,y=0ll;
+            return a;
+        }
+        ll g = gcdExtended(b,a%b,y,x);
+        y-=a/b*x;
+        return g;
+    }
+    ll bigpow(ll a, ll e){
         ll ret = 1LL; ll aa = (ll)a;
-        while (e) {
+        while (e){
             if (e&1) {
                 ret *= aa;
                 e--;
